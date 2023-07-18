@@ -8,12 +8,36 @@
     margin: 5rem auto auto;
 }
 .welcomeTitle{
-    color: whitesmoke;
     font-size: 4.5rem;
+}
+.welcomeSubtitle{
+    font-size: 3.4rem;
+    margin-top: -3rem;
+}
+.allignCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 a{
     text-decoration: none;
 }
 .dflex{
     display: flex;
+}
+.dblock{
+    display: block;
+}
+.pc50{
+    width: 50%;
+}
+.pc75{
+    width: 75%;
+}
+.pc25{
+    width: 25%;
+}
+.whitesmoke{
+    font-family: 'Patua One', serif;
+    color: whitesmoke;
 }
