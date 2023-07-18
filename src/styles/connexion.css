@@ -1,0 +1,41 @@
+.welcomeScreen{
+    height: max-content;
+    width: max-content;
+    margin: 5rem auto auto;
+}
+.welcomeTitle{
+    font-size: 4.5rem;
+}
+.welcomeSubtitle{
+    font-size: 3.4rem;
+    margin-top: -3rem;
+}
+.connexionButtons{
+    margin-top: 3rem;
+}
+.connexionInput{
+    text-align: center;
+    height: 2rem;
+    margin: auto;
+    background: #2a2936;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 50px;
+    color: #FF8E0A;
+    border: none;
+}
+.connexionInput:hover{
+    border: none;
+    transition-duration: 0.2s;
+    background: #333248;
+    color: #a05601;
+}
+.connexionInput:focus{
+    outline: none;
+    border: none;
+    background: #333248;
+    transition-duration: 0.01s;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F, 0 0 9px #1F1F1F inset;
+}
+.connexionInputBox{
+    margin-top: 1rem;
+}
