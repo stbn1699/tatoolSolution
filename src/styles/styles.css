@@ -1,0 +1,19 @@
+.pageMargin{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.welcomeScreen{
+    height: max-content;
+    width: max-content;
+    margin: 5rem auto auto;
+}
+.welcomeTitle{
+    color: whitesmoke;
+    font-size: 4.5rem;
+}
+a{
+    text-decoration: none;
+}
+.dflex{
+    display: flex;
+}

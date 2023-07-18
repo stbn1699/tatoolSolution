@@ -1,0 +1,53 @@
+.buttonBackground-1{
+    background-color: #272727;
+    height: max-content;
+}
+.button-1{
+    align-content: center;
+    width: 13rem;
+    height: 3rem;
+    margin: 1rem;
+    background: #2a2936;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 50px;
+    color: #FF8E0A;
+    border: none;
+    font-family: 'Patua One', serif;
+    font-size: 1.3rem;
+}
+.button-1:hover{
+    transition-duration: 0.2s;
+    background: #333248;
+    color: #a05601;
+}
+.button-1:active{
+    transition-duration: 0.01s;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F, 0 0 9px #1F1F1F inset;
+}
+
+.buttonBackground-2{
+    background-color: #272727;
+    height: max-content;
+}
+.button-2{
+    align-content: center;
+    width: 13rem;
+    height: 3rem;
+    margin: 1rem;
+    background: #2a2936;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 50px;
+    color: #FF8E0A;
+    border: none;
+    font-family: 'Patua One', serif;
+    font-size: 1.3rem;
+}
+.button-2:hover{
+    transition-duration: 0.2s;
+    background: #333248;
+    color: #a05601;
+}
+.button-2:active{
+    transition-duration: 0.01s;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F, 0 0 9px #1F1F1F inset;
+}
