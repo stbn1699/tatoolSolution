@@ -20,8 +20,10 @@ const ButtonCustom: React.FC<ButtonCustomProps> = ({buttontype, title, path}) =>
     }
     if (path === "goback"){
         return (
-            <div className="ButtonCustom" onClick={goBack}>
-                <div className="title">Retour</div>
+            <div className={`ButtonCustom`} onClick={goBack}>
+                <div className={`buttonBackground-${buttontype}`}>
+                    <button className={`button-${buttontype}`}>Retour</button>
+                </div>
             </div>
         )
     }else if(path === "exit"){

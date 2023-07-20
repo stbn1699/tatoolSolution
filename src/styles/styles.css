@@ -28,14 +28,17 @@ a{
 .dblock{
     display: block;
 }
+.pc25{
+    width: 25%;
+}
 .pc50{
     width: 50%;
 }
+.pc70{
+    width: 70%;
+}
 .pc75{
     width: 75%;
-}
-.pc25{
-    width: 25%;
 }
 .whitesmoke{
     font-family: 'Patua One', serif;

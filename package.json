@@ -1,9 +1,10 @@
 {
   "name": "electron-vite-react",
-  "version": "2.1.0",
+  "productName": "TatoolSolution",
+  "version": "0.1",
   "main": "dist-electron/main/index.js",
   "description": "Electron Vite React boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "author": "stbn1699",
   "license": "MIT",
   "private": true,
   "debug": {
@@ -25,6 +26,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "electron": "^23.1.1",
     "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.1",
     "less": "^4.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -39,6 +41,7 @@
     "node": "^14.18.0 || >=16.0.0"
   },
   "dependencies": {
+    "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.11.0",
     "vite-tsconfig-paths": "^4.0.5"
   }
