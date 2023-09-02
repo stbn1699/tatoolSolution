@@ -1,18 +1,32 @@
 // @ts-ignore
 import ButtonCustom from "/src/Components/utilities/ButtonCustom";
 import "@/styles/styles.css"
-import React, {useId, useState} from 'react'
 import {BrowserRouter, Link, Route, Routes, useNavigate} from "react-router-dom"
 import ConnexionForm from "@/Components/utilities/ConnexionForm";
 import Home from "@/Components/Home";
 import {Sidebar, Menu, MenuItem, SubMenu, sidebarClasses} from 'react-pro-sidebar';
 
+interface BDXHomeProps {
+    activeBtn: number;
+}
 
-function BDXHome() {
+const BDXSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
 
-    const navigate = useNavigate()
-    const goBack = () => {
-        navigate(-1)
+    const btnMenu = activeBtn === 1 ?
+        (<ButtonCustom buttontype={1} title="Menu" path="none"/>)
+        : (<MenuItem component={<Link to="/Menu" />}>Menu</MenuItem>);
+    const btnNouveauProduit = activeBtn === 2 ?
+        (<ButtonCustom buttontype={1} title="Nouveau Produit" path="none"/>)
+        :  (<MenuItem component={<Link to="/NouveauProduit" />}>Nouveau Produit</MenuItem>);
+    const btnStocks = activeBtn === 3 ?
+        (<ButtonCustom buttontype={1} title="Stocks" path="none"/>)
+        : (<MenuItem component={<Link to="/Stocks" />}>Stocks</MenuItem>);
+    const btnParametres = activeBtn === 4 ?
+        (<ButtonCustom buttontype={1} title="Paramètres" path="none"/>)
+        : (<MenuItem component={<Link to="/Parametres" />}>Paramètres</MenuItem>);
+
+    if (activeBtn === 1){
+
     }
 
     return (
@@ -54,10 +68,10 @@ function BDXHome() {
                             }
                         },
                     }}>
-                    <MenuItem component={<Link to="/Wip" />}>work in progress</MenuItem>
-                    <MenuItem component={<Link to="/Wip" />}>work in progress</MenuItem>
-                    <MenuItem component={<Link to="/Wip" />}>work in progress</MenuItem>
-                    <MenuItem component={<Link to="/Wip" />}>work in progress</MenuItem>
+                    {btnMenu}
+                    {btnNouveauProduit}
+                    {btnStocks}
+                    {btnParametres}
                     <MenuItem component={<Link to="/" />}>retour</MenuItem>
                 </Menu>
             </Sidebar>
@@ -66,4 +80,4 @@ function BDXHome() {
 
 }
 
-export default BDXHome
+export default BDXSidebar

@@ -4,7 +4,7 @@ import {app} from "electron";
 // @ts-ignore
 import ButtonCustom from "/src/Components/utilities/ButtonCustom";
 import {useState} from "react";
-import BDXHome from "@/Components/BDXHome";
+import BDXSidebar from "@/Components/BDXSidebar";
 
 const ConnexionForm = () => {
 
@@ -12,7 +12,7 @@ const ConnexionForm = () => {
     const navigate = useNavigate()
 
     const connexion = () => {
-        navigate("/BDXHome")
+        navigate("/BDXSidebar")
         if(username === "bordeaux" && password === "souvenir"){
         }
     }
