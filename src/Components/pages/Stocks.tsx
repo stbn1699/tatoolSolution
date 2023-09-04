@@ -3,14 +3,14 @@ import BDXSidebar from "@/Components/BDXSidebar";
 
 function Stocks() {
     return(
-        <>
-            <div>
-                <BDXSidebar activeBtn={1}/>
+        <div style={{display: 'flex'}}>
+            <div style={{width: '35%'}}>
+                <BDXSidebar activeBtn={3}/>
             </div>
-            <div>
+            <div style={{width: '65%'}}>
                 <p>Stocks</p>
             </div>
-        </>
+        </div>
     )
 }
 

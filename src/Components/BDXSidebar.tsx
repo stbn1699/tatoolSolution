@@ -13,21 +13,17 @@ interface BDXHomeProps {
 const BDXSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
 
     const btnMenu = activeBtn === 1 ?
-        (<ButtonCustom buttontype={1} title="Menu" path="none"/>)
+        (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Menu</a></li>)
         : (<MenuItem component={<Link to="/Menu" />}>Menu</MenuItem>);
     const btnNouveauProduit = activeBtn === 2 ?
-        (<ButtonCustom buttontype={1} title="Nouveau Produit" path="none"/>)
+        (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Nouveau Produit</a></li>)
         :  (<MenuItem component={<Link to="/NouveauProduit" />}>Nouveau Produit</MenuItem>);
     const btnStocks = activeBtn === 3 ?
-        (<ButtonCustom buttontype={1} title="Stocks" path="none"/>)
+        (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Stocks</a></li>)
         : (<MenuItem component={<Link to="/Stocks" />}>Stocks</MenuItem>);
     const btnParametres = activeBtn === 4 ?
-        (<ButtonCustom buttontype={1} title="Paramètres" path="none"/>)
+        (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Parametres</a></li>)
         : (<MenuItem component={<Link to="/Parametres" />}>Paramètres</MenuItem>);
-
-    if (activeBtn === 1){
-
-    }
 
     return (
         <>

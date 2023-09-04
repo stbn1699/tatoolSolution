@@ -12,6 +12,7 @@ const ConnexionForm = () => {
     const navigate = useNavigate()
 
     const connexion = () => {
+        //todo : REMETTRE LA CO DANS LE IF LOL
         navigate("/BDXSidebar")
         if(username === "bordeaux" && password === "souvenir"){
         }
