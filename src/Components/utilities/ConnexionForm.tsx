@@ -4,7 +4,7 @@ import {app} from "electron";
 // @ts-ignore
 import ButtonCustom from "/src/Components/utilities/ButtonCustom";
 import {useState} from "react";
-import BDXHome from "@/Components/BDXHome";
+import BDXSidebar from "@/Components/BDXSidebar";
 
 const ConnexionForm = () => {
 
@@ -12,10 +12,9 @@ const ConnexionForm = () => {
     const navigate = useNavigate()
 
     const connexion = () => {
-        console.log("in function")
+        //todo : REMETTRE LA CO DANS LE IF LOL
+        navigate("/BDXSidebar")
         if(username === "bordeaux" && password === "souvenir"){
-            console.log("in if")
-            navigate("/BDXHome")
         }
     }
 
@@ -27,13 +26,13 @@ const ConnexionForm = () => {
 
             <div className="dflex connexionInputBox">
                 <div className="pc25 whitesmoke allignCenter">Username</div>
-                <input className="pc75 connexionInput" value={username} onChange={e => setUsername(e.target.value)}
+                <input className="pc70 connexionInput" value={username} onChange={e => setUsername(e.target.value)}
                        type="text" name="username" required/>
             </div>
 
             <div className="dflex connexionInputBox">
                 <div className="pc25 whitesmoke allignCenter">Password</div>
-                <input className="pc75 connexionInput" value={password} onChange={e => setPassword(e.target.value)}
+                <input className="pc70 connexionInput" value={password} onChange={e => setPassword(e.target.value)}
                        type="password" name="password" required/>
             </div>
 
