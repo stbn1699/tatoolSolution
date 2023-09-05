@@ -1,6 +1,5 @@
 import "@/styles/main.css"
-import {Link, useNavigate} from "react-router-dom";
-import {app} from "electron";
+import {useNavigate} from "react-router-dom";
 import ButtonCustom from "@/Components/utilities/ButtonCustom";
 
 const WIP = () => {
@@ -10,7 +9,9 @@ const WIP = () => {
         navigate(-1)
     }
     return (
-        <ButtonCustom buttontype={1} title="retour" path="goback"></ButtonCustom>
+        <>
+            Work in progress
+        </>
     )
 }
 

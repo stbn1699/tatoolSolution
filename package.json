@@ -41,6 +41,8 @@
     "node": "^14.18.0 || >=16.0.0"
   },
   "dependencies": {
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.11.0",
     "vite-tsconfig-paths": "^4.0.5"

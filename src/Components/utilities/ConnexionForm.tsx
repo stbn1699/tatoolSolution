@@ -1,10 +1,9 @@
 import "@/styles/main.css"
 import {Link, useNavigate} from "react-router-dom";
-import {app} from "electron";
 // @ts-ignore
 import ButtonCustom from "/src/Components/utilities/ButtonCustom";
 import {useState} from "react";
-import BDXSidebar from "@/Components/BDXSidebar";
+import {databaseConnexion} from "@/Components/utilities/databaseFunctions";
 
 const ConnexionForm = () => {
 
@@ -14,6 +13,7 @@ const ConnexionForm = () => {
     const connexion = () => {
         //todo : REMETTRE LA CO DANS LE IF LOL
         navigate("/BDXSidebar")
+        databaseConnexion()
         if(username === "bordeaux" && password === "souvenir"){
         }
     }

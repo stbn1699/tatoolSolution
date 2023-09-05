@@ -1,10 +1,8 @@
 // @ts-ignore
-import ButtonCustom from "/src/Components/utilities/ButtonCustom";
 import "@/styles/styles.css"
-import {BrowserRouter, Link, Route, Routes, useNavigate} from "react-router-dom"
-import ConnexionForm from "@/Components/utilities/ConnexionForm";
-import Home from "@/Components/Home";
-import {Sidebar, Menu, MenuItem, SubMenu, sidebarClasses} from 'react-pro-sidebar';
+import {Link} from "react-router-dom"
+import {Sidebar, Menu, MenuItem, sidebarClasses} from 'react-pro-sidebar';
+import React from "react";
 
 interface BDXHomeProps {
     activeBtn: number;

@@ -1,7 +1,11 @@
 import BDXSidebar from "@/Components/BDXSidebar";
+import {selectTest} from "@/Components/utilities/databaseFunctions";
 
 
 function Stocks() {
+
+    selectTest()
+
     return(
         <div style={{display: 'flex'}}>
             <div style={{width: '35%'}}>
