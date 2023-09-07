@@ -2,6 +2,7 @@
 @import "button.css";
 @import "connexion.css";
 @import "sidebar.css";
+@import "stocks.css";
 
 body{
     margin: 0 !important;

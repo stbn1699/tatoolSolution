@@ -1,4 +1,6 @@
 import {QueryError} from "mysql2";
+import React, {useEffect, useState} from "react";
+import "@/styles/styles.css"
 
 const mysql = require('mysql2');
 
@@ -20,15 +22,34 @@ export function databaseConnexion() {
 }
 
 
-export function selectTest() {
-    databaseConnexion()
+export function selectProducts() {
 
-    connection.query('SELECT * FROM test', (err: QueryError, results: any) => {
-        if (err) {
-            console.error('Erreur lors de la requête SQL :', err);
-            return;
-        }
+    const [productsData, setProductsData] = useState([]);
 
-        console.log(JSON.stringify(results, null, 2));
-    });
+    useEffect(() => {
+        connection.query('SELECT * FROM products', (err: QueryError | null, results: any) => {
+            if (err) {
+                console.error('Erreur lors de la requête SQL :', err);
+                return;
+            }
+            setProductsData(results);
+        });
+    }, []);
+
+    return (
+        <div>
+            {productsData.map((row, index) => (
+
+                <div className="productCard">
+                    <img className="productPic" src={`src/img/products/productID${JSON.stringify(row["productID"])}.png`} alt="productPic"/>
+                    <div className="productInfosDiv">
+                        <div className="productInfos">Nom : {JSON.stringify(row["productName"])} | Type : {JSON.stringify(row["productType"])} | Stock : {JSON.stringify(row["productAmount"])} unitées</div>
+                    </div>
+                    <div className="plusBox">
+                        <img src="src/img/plusSign.svg" alt="+"/>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
 }

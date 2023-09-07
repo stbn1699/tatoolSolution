@@ -4,10 +4,10 @@ import BDXSidebar from "@/Components/BDXSidebar";
 function NouveauProduit() {
     return(
         <div style={{display: 'flex'}}>
-            <div style={{width: '35%'}}>
+            <div className="sidebarWidth">
                 <BDXSidebar activeBtn={2}/>
             </div>
-            <div style={{width: '65%'}}>
+            <div className="contentWidth">
                 <p>NouveauProduit</p>
             </div>
         </div>

@@ -1,3 +1,9 @@
 .sidebarBorderFix{
     border: none !important;
 }
+.sidebarWidth{
+    width: 32%
+}
+.contentWidth{
+    width: 68%
+}

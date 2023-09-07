@@ -1,18 +1,15 @@
 import BDXSidebar from "@/Components/BDXSidebar";
-import {selectTest} from "@/Components/utilities/databaseFunctions";
+import {selectProducts} from "@/Components/utilities/databaseFunctions";
 
 
 function Stocks() {
-
-    selectTest()
-
     return(
         <div style={{display: 'flex'}}>
-            <div style={{width: '35%'}}>
+            <div className="sidebarWidth">
                 <BDXSidebar activeBtn={3}/>
             </div>
-            <div style={{width: '65%'}}>
-                <p>Stocks</p>
+            <div className="contentWidth">
+                {selectProducts()}
             </div>
         </div>
     )
