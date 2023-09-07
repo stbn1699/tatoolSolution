@@ -22,8 +22,9 @@ export function databaseConnexion() {
 }
 
 
-export function selectProducts() {
+export function selectProducts({viewListProp}: { viewListProp: boolean }) {
 
+    let cardStyle = <div></div>
     const [productsData, setProductsData] = useState([]);
 
     useEffect(() => {
@@ -36,20 +37,24 @@ export function selectProducts() {
         });
     }, []);
 
-    return (
-        <div>
-            {productsData.map((row, index) => (
+    if(viewListProp){
+        cardStyle =
+            <div>
+                {productsData.map((row, index) => (
+                    <div className="productCard">
+                        <img className="productPic" src={`src/img/products/productID${JSON.stringify(row["productID"])}.png`} alt="productPic"/>
+                        <div className="productInfosDiv">
+                            <div className="productInfos">Nom : {JSON.stringify(row["productName"])} | Type : {JSON.stringify(row["productType"])} | Stock : {JSON.stringify(row["productAmount"])} unitées</div>
+                        </div>
+                        <div className="plusBox">
+                            <img src="src/img/plusSign.svg" alt="+"/>
+                        </div>
+                    </div>
+                ))}
+            </div>
+    }else{
+        cardStyle = <div>lolilol</div>
+    }
 
-                <div className="productCard">
-                    <img className="productPic" src={`src/img/products/productID${JSON.stringify(row["productID"])}.png`} alt="productPic"/>
-                    <div className="productInfosDiv">
-                        <div className="productInfos">Nom : {JSON.stringify(row["productName"])} | Type : {JSON.stringify(row["productType"])} | Stock : {JSON.stringify(row["productAmount"])} unitées</div>
-                    </div>
-                    <div className="plusBox">
-                        <img src="src/img/plusSign.svg" alt="+"/>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
+    return cardStyle
 }
