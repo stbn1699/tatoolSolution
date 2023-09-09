@@ -1,7 +1,9 @@
 .productCard{
     height: 4rem;
     margin-top: 2rem;
-    width: 40rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 38rem;
     background: #2E2E2E;
     box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
     border-radius: 2rem;
@@ -30,9 +32,94 @@
     width: 3rem;
     margin: 0.5rem;
     background-color: #00BD1F;
+    box-shadow: -2px -2px 12px rgba(0, 249, 41, 0.25), 2px 2px 12px #008115;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+
+
+.card2{
+    height: 18rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 11rem;
+    background: #2E2E2E;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 2rem;
+}
+.productPic2{
+    height: 7rem;
+    border-radius: 6rem;
+    margin: 1rem 2rem;
+}
+.productInfosDiv2{
+    height: 4.5rem;
+    width: 11rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.productInfos2{
+    color: white;
+    font-family: 'Patua One',serif;
+    font-size: 1.1rem;
+    margin: 0;
+}
+.plusBox2{
+    height: 2.5rem;
+    width: 9rem;
+    margin: 1rem;
+    background-color: #00BD1F;
     border-radius: 1.5rem;
     box-shadow: -2px -2px 12px rgba(0, 249, 41, 0.25), 2px 2px 12px #008115;
     display: flex;
     align-items:center;
     justify-content: center;
+}
+.allCards{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40rem;
+}
+p{
+    margin: 0;
+}
+
+.changeViewBox{
+    height: 2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 38rem;
+    background: #2E2E2E;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 2rem;
+}
+
+.changeViewButton{
+    text-align: center;
+    height: 2rem;
+    margin: auto;
+    background: #2a2936;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 50px;
+    color: #FF8E0A;
+    border: none;
+}
+.changeViewButton:hover{
+    border: none;
+    transition-duration: 0.2s;
+    background: #333248;
+    color: #a05601;
+}
+.changeViewButton:active{
+    outline: none;
+    border: none;
+    background: #333248;
+    transition-duration: 0.01s;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F, 0 0 9px #1F1F1F inset;
 }

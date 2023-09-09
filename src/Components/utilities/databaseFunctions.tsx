@@ -1,6 +1,7 @@
 import {QueryError} from "mysql2";
 import React, {useEffect, useState} from "react";
 import "@/styles/styles.css"
+import Stocks from "@/Components/pages/Stocks";
 
 const mysql = require('mysql2');
 
@@ -22,9 +23,8 @@ export function databaseConnexion() {
 }
 
 
-export function selectProducts({viewListProp}: { viewListProp: boolean }) {
-
-    let cardStyle = <div></div>
+export function selectProducts() {
+    const [viewList, setViewList] = useState(false);
     const [productsData, setProductsData] = useState([]);
 
     useEffect(() => {
@@ -37,24 +37,53 @@ export function selectProducts({viewListProp}: { viewListProp: boolean }) {
         });
     }, []);
 
-    if(viewListProp){
-        cardStyle =
-            <div>
-                {productsData.map((row, index) => (
-                    <div className="productCard">
-                        <img className="productPic" src={`src/img/products/productID${JSON.stringify(row["productID"])}.png`} alt="productPic"/>
-                        <div className="productInfosDiv">
-                            <div className="productInfos">Nom : {JSON.stringify(row["productName"])} | Type : {JSON.stringify(row["productType"])} | Stock : {JSON.stringify(row["productAmount"])} unitées</div>
-                        </div>
-                        <div className="plusBox">
-                            <img src="src/img/plusSign.svg" alt="+"/>
-                        </div>
-                    </div>
-                ))}
-            </div>
-    }else{
-        cardStyle = <div>lolilol</div>
+    function changeView() {
+        setViewList(!viewList);
     }
 
-    return cardStyle
+    return (
+        <div>
+            <div className="changeViewBox">
+                <button className="changeViewButton" onClick={changeView}>Change View</button>
+            </div>
+            {viewList ? (
+                <div>
+                    {productsData.map((row, index) => (
+                        <div className="productCard">
+                            <img className="productPic" src={`src/img/products/productID${JSON.stringify(row["productID"])}.png`} alt="productPic"/>
+                            <div className="productInfosDiv">
+                                <div className="productInfos">
+                                    Nom : {JSON.stringify(row["productName"])} |
+                                    Type : {JSON.stringify(row["productType"])} |
+                                    Stock : {JSON.stringify(row["productAmount"])} unitées</div>
+                            </div>
+                            <div className="plusBox">
+                                <img src="src/img/plusSign.svg" alt="+"/>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <div>
+                    <div className="allCards">
+                        {productsData.map((row, index) => (
+                            <div className="card2">
+                                <img className="productPic2" src={`src/img/products/productID${JSON.stringify(row["productID"])}.png`} alt="productPic"/>
+                                <div className="productInfosDiv2">
+                                    <div className="productInfos2">
+                                        <p>Nom : {JSON.stringify(row["productName"])}</p>
+                                        <p>Type : {JSON.stringify(row["productType"])}</p>
+                                        <p>Stock : {JSON.stringify(row["productAmount"])} unitées</p>
+                                    </div>
+                                </div>
+                                <div className="plusBox2">
+                                    <img src="src/img/plusSign.svg" alt="+"/>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
+    );
 }
