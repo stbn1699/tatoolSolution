@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './samples/node-api'
-import BDXSidebar from "@/Components/BDXSidebar";
+import TatoolSidebar from "@/Components/TatoolSidebar";
 import Home from './Components/Home'
 import {
     createBrowserRouter,
@@ -23,7 +23,7 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}> </Route>
-                <Route path="/BDXSidebar" element={<BDXSidebar activeBtn={0}/>}> </Route>
+                <Route path="/TatoolSidebar" element={<TatoolSidebar activeBtn={0}/>}> </Route>
                 <Route path="/WIP" element={<WIP/>}> </Route>
                 <Route path="/Menu" element={<Menu/>}> </Route>
                 <Route path="/Stocks" element={<Stocks/>}> </Route>

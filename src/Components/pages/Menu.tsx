@@ -1,4 +1,4 @@
-import BDXSidebar from "@/Components/BDXSidebar";
+import BDXSidebar from "@/Components/TatoolSidebar";
 
 
 function Menu() {

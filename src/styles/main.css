@@ -3,6 +3,7 @@
 @import "connexion.css";
 @import "sidebar.css";
 @import "stocks.css";
+@import "newProduct.css";
 
 body{
     margin: 0 !important;

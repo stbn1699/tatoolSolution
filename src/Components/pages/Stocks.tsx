@@ -1,4 +1,4 @@
-import BDXSidebar from "@/Components/BDXSidebar";
+import BDXSidebar from "@/Components/TatoolSidebar";
 import {selectProducts} from "@/Components/utilities/databaseFunctions";
 import {Logger} from "sass";
 

@@ -1,4 +1,4 @@
-import BDXSidebar from "@/Components/BDXSidebar";
+import BDXSidebar from "@/Components/TatoolSidebar";
 
 
 function Parametres() {
@@ -8,7 +8,7 @@ function Parametres() {
                 <BDXSidebar activeBtn={4}/>
             </div>
             <div className="contentWidth">
-                <p>Parametres</p>
+                <p>Paramètres</p>
             </div>
         </div>
     )

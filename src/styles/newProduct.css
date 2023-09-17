@@ -1,0 +1,52 @@
+.newproductCard{
+    height: 250px;
+    width: 400px;
+    margin: 9.5rem auto auto;
+    background: #2E2E2E;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 2rem;
+}
+.newproductContent{
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.newproductInputText{
+    color: white;
+    font-family: 'Patua One',serif;
+    width: 7.5rem;
+}
+.newproductField{
+    margin-top: 0.3rem;
+    display: flex;
+}
+.newproductButton{
+    margin: 0 50px;
+}
+
+.newproductButton{
+    text-align: center;
+    width: 300px;
+    height: 25px;
+    margin: 0 50px;
+    background: #2a2936;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F;
+    border-radius: 50px;
+    color: #FF8E0A;
+    border: none;
+}
+.newproductButton:hover{
+    border: none;
+    transition-duration: 0.2s;
+    background: #333248;
+    color: #a05601;
+}
+.newproductButton:active{
+    outline: none;
+    border: none;
+    background: #333248;
+    transition-duration: 0.01s;
+    box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F, 0 0 9px #1F1F1F inset;
+}

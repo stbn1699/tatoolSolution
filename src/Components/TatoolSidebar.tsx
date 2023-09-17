@@ -8,7 +8,7 @@ interface BDXHomeProps {
     activeBtn: number;
 }
 
-const BDXSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
+const TatoolSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
 
     const btnMenu = activeBtn === 1 ?
         (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Menu</a></li>)
@@ -20,7 +20,7 @@ const BDXSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
         (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Stocks</a></li>)
         : (<MenuItem component={<Link to="/Stocks" />}>Stocks</MenuItem>);
     const btnParametres = activeBtn === 4 ?
-        (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Parametres</a></li>)
+        (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Paramètres</a></li>)
         : (<MenuItem component={<Link to="/Parametres" />}>Paramètres</MenuItem>);
 
     return (
@@ -74,4 +74,4 @@ const BDXSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
 
 }
 
-export default BDXSidebar
+export default TatoolSidebar
