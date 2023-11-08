@@ -24,13 +24,13 @@
 .productInfos{
     color: white;
     font-family: 'Patua One',serif;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin: auto
 }
 .plusBox{
-    height: 3rem;
-    width: 3rem;
-    margin: 0.5rem;
+    height: 2.5rem;
+    width: 11rem;
+    margin: 0.75rem;
     background-color: #00BD1F;
     box-shadow: -2px -2px 12px rgba(0, 249, 41, 0.25), 2px 2px 12px #008115;
     border-radius: 1.5rem;
@@ -38,9 +38,17 @@
     align-items:center;
     justify-content: center;
 }
-
-
-
+.modifyBox{
+    height: 3rem;
+    width: 3rem;
+    margin: 0.5rem;
+    background: #BD7100;
+    box-shadow: -2px -2px 12px rgba(189, 113, 0, 0.25), 2px 2px 12px #754600;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
 .card2{
     height: 18rem;
     margin-top: 2rem;
@@ -54,7 +62,6 @@
 .productPic2{
     height: 7rem;
     border-radius: 6rem;
-    margin: 1rem 2rem;
 }
 .productInfosDiv2{
     height: 4.5rem;
@@ -74,8 +81,58 @@
     width: 9rem;
     margin: 1rem;
     background-color: #00BD1F;
-    border-radius: 1.5rem;
     box-shadow: -2px -2px 12px rgba(0, 249, 41, 0.25), 2px 2px 12px #008115;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.amountInput{
+    text-align: center;
+    background: #00BD1F;
+    box-shadow: inset -4px -4px 9px rgba(0, 249, 41, 0.25), inset 4px 4px 9px #008115;
+    border-radius: 0.7rem;
+    color: white;
+    border: none;
+    width: 3.5rem;
+    height: 1.3rem;
+}
+.amountButton{
+    text-align: center;
+    background: #00BD1F;
+    transition-duration: 0.2s;
+    border-radius: 0.7rem;
+    border: none;
+    width: 2.5rem;
+    height: 1.3rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+.amountButton:hover{
+    transition-duration: 0.2s;
+    box-shadow: inset -4px -4px 9px rgba(0, 249, 41, 0.25), inset 4px 4px 9px #008115;
+}
+.amountButton:active{
+    background-color: #008115;
+    box-shadow: none;
+}
+.plusIcon{
+    height: 1rem;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin:0;
+}
+.modifyBox2{
+    height: 2.5rem;
+    width: 9rem;
+    margin: 1rem;
+    background: #BD7100;
+    box-shadow: -2px -2px 8px rgba(189, 113, 0, 0.25), 2px 2px 8px #754600;
+    border-radius: 1.5rem;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -122,4 +179,8 @@ p{
     background: #333248;
     transition-duration: 0.01s;
     box-shadow: -4px -4px 9px #373737, 4px 4px 9px #1F1F1F, 0 0 9px #1F1F1F inset;
+}
+.picBox{
+    height: 7rem;
+    margin: 1rem 2rem;
 }

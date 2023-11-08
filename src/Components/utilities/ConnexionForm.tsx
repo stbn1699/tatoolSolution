@@ -6,22 +6,23 @@ import {useState} from "react";
 import {databaseConnexion} from "@/Components/utilities/databaseFunctions";
 
 
-const [entrepot, setEntrepot] = useState(0)
 
 const ConnexionForm = () => {
 
+    //const [entrepot, setEntrepot] = useState(0)
 
     const navigate = useNavigate()
 
     const connexion = () => {
         if(username === "lyon" && password === "rappel"){
-            navigate("/TatoolSidebar")
             databaseConnexion()
-            setEntrepot(1)
+            navigate("/Menu")
+            //setEntrepot(1)
         }else if(username === "bordeaux" && password === "souvenir"){
             navigate("/TatoolSidebar")
             databaseConnexion()
-            setEntrepot(2)
+            navigate("/Menu")
+            //setEntrepot(2)
         }
     }
 
@@ -43,17 +44,17 @@ const ConnexionForm = () => {
                        type="password" name="password" required/>
             </div>
 
-<div className="dflex connexionButtons">
-    <div className="allignCenter pc50">
-        <ButtonCustom title="Quitter" buttontype="2" path="exit"></ButtonCustom>
-    </div>
-    <div className="allignCenter pc50">
-        <button className="buttonBackground-2 button-2" onClick={connexion}>Se Connecter</button>
-    </div>
-</div>
+            <div className="dflex connexionButtons">
+                <div className="allignCenter pc50">
+                    <ButtonCustom title="Quitter" buttontype="2" path="exit"></ButtonCustom>
+                </div>
+                <div className="allignCenter pc50">
+                    <button className="buttonBackground-2 button-2" onClick={connexion}>Se Connecter</button>
+                </div>
+            </div>
 
         </>
     );
 }
 
-export default {ConnexionForm, entrepot}
+export default ConnexionForm

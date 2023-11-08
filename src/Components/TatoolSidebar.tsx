@@ -22,6 +22,9 @@ const TatoolSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
     const btnParametres = activeBtn === 4 ?
         (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Paramètres</a></li>)
         : (<MenuItem component={<Link to="/Parametres" />}>Paramètres</MenuItem>);
+    const btnModifProduit = activeBtn === 5 ?
+        (<li className="ps-menuitem-root css-pvsiam"><a className="button-3 ps-menu-button">Modifier un produit</a></li>)
+        : (<MenuItem component={<Link to="/ModifierProduit" />}>Modifier un produit</MenuItem>);
 
     return (
         <>
@@ -33,7 +36,8 @@ const TatoolSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
                     width: '15rem',
                     margin: '2rem',
                     boxShadow: '-4px -4px 9px #373737, 4px 4px 9px #1F1F1F',
-                    paddingTop: '5rem'
+                    paddingTop: '2.5rem',
+                    paddingBottom: '2.5rem'
                 },
             }}>
                 <Menu menuItemStyles={{
@@ -64,6 +68,7 @@ const TatoolSidebar: React.FC<BDXHomeProps> = ({activeBtn}) => {
                     }}>
                     {btnMenu}
                     {btnNouveauProduit}
+                    {btnModifProduit}
                     {btnStocks}
                     {btnParametres}
                     <MenuItem component={<Link to="/" />}>retour</MenuItem>

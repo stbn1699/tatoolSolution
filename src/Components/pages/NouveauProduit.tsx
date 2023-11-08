@@ -1,4 +1,4 @@
-import BDXSidebar from "@/Components/TatoolSidebar";
+import TatoolSidebar from "@/Components/TatoolSidebar";
 import {newProduct} from "@/Components/utilities/databaseFunctions";
 import "@/styles/styles.css"
 import React, { useState } from 'react';
@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 
 function NouveauProduit() {
 
-    const [image, setImage] = useState<File>(null); // Type 'File' pour l'image
+    // const [image, setImage] = useState<String>(''); // Type 'File' pour l'image
     const [nom, setNom] = useState<string>(''); // Type 'string' pour le nom
     const [stockLyon, setStockLyon] = useState<number | string>(''); // Type 'number' pour le stock
     const [stockBordeaux, setStockBordeaux] = useState<number | string>(''); // Type 'number' pour le stock
@@ -17,7 +17,7 @@ function NouveauProduit() {
         <>
             <div style={{display: 'flex'}}>
                 <div className="sidebarWidth">
-                    <BDXSidebar activeBtn={2}/>
+                    <TatoolSidebar activeBtn={2}/>
                 </div>
                 <div className="contentWidth">
                     <div className="newproductCard">
@@ -25,7 +25,7 @@ function NouveauProduit() {
                             <div>
                                 <div className="newproductField">
                                     <div className="newproductInputText">image produit : </div>
-                                    <input id="image" type="file" accept="image/png" onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}/>
+                                    <input id="bonjour" type="file" accept="image/png" /*onChange={(e) => setImage(e.target.value)}*//>
                                 </div>
                                 <div className="newproductField">
                                     <div className="newproductInputText">nom produit : </div>
@@ -52,7 +52,7 @@ function NouveauProduit() {
                             </div>
                         </div>
                         <div>
-                            {newProduct({image, nom, stockLyon, stockBordeaux, type})}
+                            {newProduct({nom, stockLyon, stockBordeaux, type})}
                         </div>
                     </div>
                 </div>

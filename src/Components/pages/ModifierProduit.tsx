@@ -1,18 +1,18 @@
 import TatoolSidebar from "@/Components/TatoolSidebar";
+import {modifyProducts} from "@/Components/utilities/databaseFunctions";
+import {Logger} from "sass";
 
-
-function Menu() {
-
+function ModifierProduit() {
     return(
         <div style={{display: 'flex'}}>
             <div className="sidebarWidth">
-                <TatoolSidebar activeBtn={1}/>
+                <TatoolSidebar activeBtn={5}/>
             </div>
             <div className="contentWidth">
-
+                {modifyProducts()}
             </div>
         </div>
     )
 }
 
-export default Menu
+export default ModifierProduit

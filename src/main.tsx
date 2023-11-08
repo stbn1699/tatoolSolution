@@ -16,6 +16,7 @@ import Menu from "@/Components/pages/Menu";
 import Stocks from "@/Components/pages/Stocks";
 import NouveauProduit from "@/Components/pages/NouveauProduit";
 import Parametres from "@/Components/pages/Parametres";
+import ModifierProduit from "@/Components/pages/ModifierProduit";
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
                 <Route path="/Stocks" element={<Stocks/>}> </Route>
                 <Route path="/NouveauProduit" element={<NouveauProduit/>}> </Route>
                 <Route path="/Parametres" element={<Parametres/>}> </Route>
+                <Route path="/ModifierProduit" element={<ModifierProduit/>}> </Route>
             </Routes>
         </BrowserRouter>
     );
